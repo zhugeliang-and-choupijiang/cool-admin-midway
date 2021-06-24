@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  db:
+    #restart: always
+    image: postgres:latest
+    privileged: true
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=WK5JbniQN
+      - POSTGRES_DB=mydb
+    volumes:
+      - ./data:/var/lib/postgresql/data/

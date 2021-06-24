@@ -22,6 +22,7 @@
     "midwayjs-cool-socket": "^1.0.7",
     "midwayjs-cool-wxpay": "^1.0.12",
     "mysql2": "^2.2.5",
+    "pg": "^8.6.0",
     "svg-captcha": "^1.4.0",
     "svg-to-dataurl": "^1.0.0"
   },
