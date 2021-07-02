@@ -45,6 +45,7 @@ export default (appInfo: EggAppInfo) => {
     csrf: {
       enable: false,
     },
+    domainWhiteList: ['http://192.168.31.10:9000', 'http://localhost:9000'],
   };
 
   // cool-admin特有的配置
@@ -113,6 +114,12 @@ export default (appInfo: EggAppInfo) => {
   // 将egg日志替换成midway
   config.midwayFeature = {
     replaceEggLogger: true,
+  };
+
+  config.cors = {
+    // origin: '*', //注释掉，因为不支持cookie
+    credentials: true, // 允许跨域请求携带cookies
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS',
   };
 
   return config;

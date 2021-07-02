@@ -7,4 +7,8 @@ export default {
     enable: true,
     package: 'egg-view-nunjucks',
   },
+  cors: {
+    enable: true,
+    package: 'egg-cors',
+  },
 } as EggPlugin;
