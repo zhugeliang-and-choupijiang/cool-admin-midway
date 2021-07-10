@@ -12,6 +12,7 @@ import { CoolController, BaseController } from 'midwayjs-cool-core';
 import { LoginDTO } from '../../dto/login';
 import { BaseSysLoginService } from '../../service/sys/login';
 import { BaseSysParamService } from '../../service/sys/param';
+import { CreateApiDoc } from '@midwayjs/swagger';
 
 /**
  * 不需要登录的后台接口
@@ -40,6 +41,10 @@ export class BaseOpenController extends BaseController {
    * 登录
    * @param login
    */
+  @(CreateApiDoc()
+    .summary('login')
+    .description('This is a open api for login')
+    .build())
   @Post('/login')
   async login(@Body(ALL) login: LoginDTO) {
     return this.ok(await this.baseSysLoginService.login(login));

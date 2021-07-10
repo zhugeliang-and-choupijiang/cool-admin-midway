@@ -5,6 +5,7 @@ import * as orm from '@midwayjs/orm';
 import * as cool from 'midwayjs-cool-core';
 // import * as wxpay from 'midwayjs-cool-wxpay';
 import * as oss from 'midwayjs-cool-oss';
+import * as swagger from '@midwayjs/swagger';
 // import * as redis from 'midwayjs-cool-redis';
 // import * as queue from 'midwayjs-cool-queue';
 // import * as alipay from 'midwayjs-cool-alipay';
@@ -29,6 +30,10 @@ import * as oss from 'midwayjs-cool-oss';
     //alipay,
     // socket
     //socket,
+    {
+      component: swagger,
+      enabledEnvironment: ['local'],
+    },
   ],
 })
 export class ContainerLifeCycle implements ILifeCycle {
