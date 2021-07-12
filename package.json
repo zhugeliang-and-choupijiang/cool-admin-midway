@@ -28,6 +28,7 @@
     "midwayjs-cool-wxpay": "^1.0.12",
     "mysql2": "^2.2.5",
     "pg": "^8.6.0",
+    "qs": "^6.10.1",
     "svg-captcha": "^1.4.0",
     "svg-to-dataurl": "^1.0.0",
     "swagger-ui-dist": "^3.51.1"
