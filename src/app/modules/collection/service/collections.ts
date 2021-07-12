@@ -13,11 +13,11 @@ export class CollectionsService extends BaseService {
   /**
    * 返回所有数据
    */
-  async collections(keyWord) {
+  async collections(page: number, size: number) {
     const axios = require('axios');
-    const json = await axios.get(
+    const json = await axios.request(
       'https://dev.ariginal.one/ariginalnfts/v1/collections',
-      { param: {} }
+      { params: { page: page, limit: size } }
     );
     return json.data.data;
   }

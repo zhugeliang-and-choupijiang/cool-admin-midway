@@ -1,4 +1,4 @@
-import { Get, Inject, Provide } from '@midwayjs/decorator';
+import { Get, Inject, Provide, Query } from '@midwayjs/decorator';
 import { CoolController, BaseController } from 'midwayjs-cool-core';
 import { CollectionsService } from '../../service/collections';
 
@@ -19,7 +19,8 @@ export class CollectionController extends BaseController {
    * 其他接口
    */
   @Get('/collections')
-  async collections() {
-    return this.ok(await this.collectionsService.collections({}));
+  async collections(@Query() page: number, @Query() size: number) {
+    console.log(page, size);
+    return this.ok(await this.collectionsService.collections(page, size));
   }
 }
